@@ -1,0 +1,10 @@
+---
+applications:
+ - name: resource-server
+   memory: 1G
+   instances: 1
+   path: target/multi-tenant-resource-server-0.0.1-SNAPSHOT.jar
+   env:
+     SPRING_SECURITY_OAUTH2_RESOURCESERVER_JWT_ISSUER_URIS: https://planet10-sso.uaa.tas.planet10.lab/oauth/token,https://planet10-sso.uaa.tas2.planet10.lab/oauth/token
+     #SPRING_SECURITY_OAUTH2_RESOURCESERVER_JWT_ISSUER_URIS: https://planet10-sso.uaa.tas.planet10.lab/oauth/token
+     #SPRING_SECURITY_OAUTH2_RESOURCESERVER_JWT_ISSUERURI: https://<PLAN_AUTH_DOMAIN>.uaa.<YOUR_DOMAIN>/oauth/token
